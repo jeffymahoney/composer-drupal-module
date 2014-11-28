@@ -4,7 +4,7 @@
 # for this module.
 
 # Menu items corresponding to these URLs are defined separately in the
-# page_example.menu_links.yml file.
+# page_example.links.menu.yml file.
 
 # If the user accesses http://example.com/?q=examples/page_example, the routing
 # system will look for a route with that path. In this case it will find a
@@ -16,7 +16,7 @@
 page_example_description:
   path: 'examples/page_example'
   defaults:
-    _content: '\Drupal\page_example\Controller\PageExampleController::description'
+    _controller: '\Drupal\page_example\Controller\PageExampleController::description'
   requirements:
     _access: 'TRUE'
 
@@ -27,7 +27,7 @@ page_example_description:
 page_example_simple:
   path: 'examples/page_example/simple'
   defaults:
-    _content: '\Drupal\page_example\Controller\PageExampleController::simple'
+    _controller: '\Drupal\page_example\Controller\PageExampleController::simple'
   requirements:
     _permission: 'access simple page'
 
@@ -47,6 +47,6 @@ page_example_simple:
 page_example_arguments:
   path: 'examples/page_example/arguments/{first}/{second}'
   defaults:
-    _content: '\Drupal\page_example\Controller\PageExampleController::arguments'
+    _controller: '\Drupal\page_example\Controller\PageExampleController::arguments'
   requirements:
     _permission: 'access arguments page'
